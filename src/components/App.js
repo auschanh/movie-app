@@ -1,9 +1,24 @@
 import React, { useEffect, useState} from 'react';
 import Movie from './Movie';
 import SearchBar from './SearchBar';
+import useMovies from '../hooks/useMovies';
 
 const App = () => {
-  const movies = [1,2,3];
+  
+  const [selectedMovie, setSelectedMovie] = useState('');
+  const [movies, search] = useMovies('spirited away');
+
+  useEffect(() => {
+    setSelectedMovie(movies[0]);
+    
+  }, [movies])
+  
+
+  const onMovieSelect = movie => {
+    setSelectedMovie(movie);
+  };
+
+
     return (
       <div>
 
@@ -16,19 +31,17 @@ const App = () => {
         </section>
 
         <section className="section">
-          <SearchBar />
+          <SearchBar onSearchSubmit={search}/>
             
           <section className="section">
               <div className="container">
-                {movies.map(movie => (
-                  <Movie /> 
-                ))}
+                <Movie movies={movies}/> 
               </div>
           </section>
-          
+
         </section>
         </div>
       );
       
-}
+};
 export default App;

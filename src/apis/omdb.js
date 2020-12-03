@@ -1,6 +1,6 @@
 import axios from 'axios';
 
 export default axios.create({
-  baseURL: 'http://www.omdbapi.com/?apikey=',
+  baseURL: 'http://www.omdbapi.com',
   
 });

@@ -1,14 +1,19 @@
 import React from 'react';
 
-const Movie = () => {
-  return (
-  <div className="movie mt-2"> 
-    <div className="notification is-danger py-1">
+const Movie = ({ movies }) => {
+  const renderedList = movies.map(movie => {
+   return(
+     <div className="container">
+    <div className="notification is-success py-1" key={movie.imdbID}>
       <button className="delete"></button>
-      Some Movie I Rated Here 🍿
+      🍿 {movie.Title} 
     </div>
-  </div>
-  );
-}
+    <img src={movie.Poster}></img>
+    </div>
+   );
+  });
+
+  return <div className="movie mt-2"> {renderedList}</div>;
+};
 
 export default Movie;

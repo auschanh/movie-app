@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
 
 // onFormSubmit is a call back prop
-const SearchBar = ({ onFormSubmit }) => {
+const SearchBar = ({ onSearchSubmit }) => {
   const [term, setTerm] = useState('');
 
   const onSubmit = e => {
     e.preventDefault();
 
     // Submit this term
-    onFormSubmit(term);
+    onSearchSubmit(term);
   };
 
   return (
