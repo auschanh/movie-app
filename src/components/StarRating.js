@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaStar } from 'react-icons/fa';
 import './StarRating.css';
 
@@ -9,6 +9,7 @@ const StarRating = () => {
 
   return (
   <div>
+    
     {[...Array(5)].map((star, i) => {
       const ratingValue = i+1; // indexing starts at 0, so add 1
       
