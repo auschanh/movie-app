@@ -1,4 +1,7 @@
 .movie-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 400px !important;
   height: 400px !important;
   margin-bottom: 40px;

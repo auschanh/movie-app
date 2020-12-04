@@ -45,7 +45,7 @@ const MovieItem = ({ movieID }) => {
         </div>
       </div>
       <footer className="card-footer has-text-weight-bold">
-        <p className="card-footer-item has-text-left">
+        <p className="card-footer-item">
           IMDB Rating: {movieData.imdbRating}
         </p>
       </footer>

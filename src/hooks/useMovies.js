@@ -25,6 +25,10 @@ const useMovies = (defaultSearchTerm) => {
         s: searchedTerm,
       }
     });
+    if(!response.data.Search){
+      setMovies([]);
+      return [ movies, search];
+    }
     const responseList = response.data.Search.map(movie => movie.imdbID);
     console.log(responseList);
     setMovies(responseList);

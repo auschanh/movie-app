@@ -35,7 +35,10 @@ const App = () => {
             
           <section className="section">
               <div className="container">
-                <Movie movies={movies} key={movies.imdbID}/> 
+                {movies.length > 0 ? (<Movie movies={movies} key={movies.imdbID}/>)  
+                 :
+                (<p> Could not find any movies 🙁 Please check your spelling. </p>)}
+                
               </div>
           </section>
 
