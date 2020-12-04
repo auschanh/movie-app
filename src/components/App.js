@@ -2,7 +2,7 @@ import React, { useEffect, useState} from 'react';
 import Movie from './Movie';
 import SearchBar from './SearchBar';
 import useMovies from '../hooks/useMovies';
-
+import StarRating from './StarRating';
 
 const App = () => {
   
@@ -41,7 +41,7 @@ const App = () => {
                 
               </div>
           </section>
-
+          <StarRating/>
         </section>
         </div>
       );
