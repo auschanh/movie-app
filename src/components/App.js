@@ -6,7 +6,7 @@ import useMovies from '../hooks/useMovies';
 const App = () => {
   
   const [selectedMovie, setSelectedMovie] = useState('');
-  const [movies, search] = useMovies('spirited away');
+  const [movies, search] = useMovies('avengers');
 
   useEffect(() => {
     setSelectedMovie(movies[0]);
@@ -35,7 +35,7 @@ const App = () => {
             
           <section className="section">
               <div className="container">
-                <Movie movies={movies}/> 
+                <Movie movies={movies} key={movies.imdbID}/> 
               </div>
           </section>
 

@@ -1,0 +1,17 @@
+.movie-img {
+  width: 400px !important;
+  height: 400px !important;
+  margin-bottom: 40px;
+}
+
+.movie-list {
+  display: flex !important;
+  flex-wrap: wrap !important;
+}
+.movie-item {
+  margin: 1rem;
+}
+.movie-content {
+  display: flex !important;
+  flex-wrap: wrap !important;
+}
