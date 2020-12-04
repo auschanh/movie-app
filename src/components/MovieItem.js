@@ -10,10 +10,6 @@ const KEY = "40d1ffa2"
 const MovieItem = ({ movieID }) => {
   const [movieData, setMovieData] = useState({});
 
-  // useEffect(() => {
-  //   onStarClick(rating);
-  // }, [rating]);
-
   // perform a search after rendering using movieID
   useEffect(() => {
     search(movieID);
@@ -47,12 +43,19 @@ const MovieItem = ({ movieID }) => {
           <p><strong>Genre:</strong> {movieData.Genre}</p>
           <p><strong>Runtime:</strong> {movieData.Runtime}</p>
           <p><strong>IMDB Rating:</strong> {movieData.imdbRating}</p>
+          <p className="card-footer-item">
+         <strong>My Rating:</strong> <StarRating />
+         </p>
         </div>
       </div>
+     
       <footer className="card-footer has-text-weight-bold">
-        <p className="card-footer-item">
-         My Rating: <StarRating />
-        </p>
+      <button className="button is-primary card-footer-item">
+          <span className="icon is-small">
+            <i className="fas fa-check"></i>
+          </span>
+          <span>Add</span>
+        </button>
       </footer>
     </div>
 

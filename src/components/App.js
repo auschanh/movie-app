@@ -2,12 +2,12 @@ import React, { useEffect, useState} from 'react';
 import Movie from './Movie';
 import SearchBar from './SearchBar';
 import useMovies from '../hooks/useMovies';
-import StarRating from './StarRating';
 
 const App = () => {
   
   const [selectedMovie, setSelectedMovie] = useState('');
   const [movies, search] = useMovies('avengers');
+  
 
   // useEffect(() => {
   //   setSelectedMovie(movies[0]);
@@ -31,8 +31,16 @@ const App = () => {
         </section>
 
         <section className="section">
-          <SearchBar onSearchSubmit={search}/>
-            
+          <SearchBar onSearchSubmit={search} />
+          <section className="my-movies">
+            <div className="container">
+              <div className="notification is-success py-1 mt-5">
+              <button className="delete"></button>
+                No movies selected
+                
+              </div>  
+            </div>  
+          </section>  
           <section className="section">
               <div className="container">
                 {movies.length > 0 ? (<Movie movies={movies} key={movies.imdbID}/>)  
@@ -41,7 +49,7 @@ const App = () => {
                 
               </div>
           </section>
-          <StarRating/>
+        
         </section>
         </div>
       );
