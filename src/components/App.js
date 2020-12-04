@@ -3,16 +3,16 @@ import Movie from './Movie';
 import SearchBar from './SearchBar';
 import useMovies from '../hooks/useMovies';
 
+
 const App = () => {
   
   const [selectedMovie, setSelectedMovie] = useState('');
   const [movies, search] = useMovies('avengers');
 
-  useEffect(() => {
-    setSelectedMovie(movies[0]);
+  // useEffect(() => {
+  //   setSelectedMovie(movies[0]);
     
-  }, [movies])
-  
+  // }, [movies])
 
   const onMovieSelect = movie => {
     setSelectedMovie(movie);

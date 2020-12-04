@@ -2,7 +2,7 @@ import React from 'react';
 import MovieItem from './MovieItem';
 
 const Movie = ({ movies, key }) => {
-  const renderedList = movies.map(movie => {
+  const renderedList = movies.map(movieID => {
   //  return(
   //    <div className="container">
   //   <div className="notification is-success py-1" key={key}>
@@ -15,7 +15,7 @@ const Movie = ({ movies, key }) => {
       return(
         <MovieItem
         key={key}
-        movie={movie}
+        movieID={movieID}
         />
       );
   });

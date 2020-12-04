@@ -3,7 +3,6 @@ import omdb from '../apis/omdb';
 
 // omdb api key
 const KEY = "40d1ffa2"
-// http://www.omdbapi.com/?apikey=40d1ffa2&t=spirited+away
 
 // custom hook that fetches movie data from imdb/omdb 
 // called from App component
@@ -26,8 +25,9 @@ const useMovies = (defaultSearchTerm) => {
         s: searchedTerm,
       }
     });
-    console.log(response)
-    setMovies(response.data.Search);
+    const responseList = response.data.Search.map(movie => movie.imdbID);
+    console.log(responseList);
+    setMovies(responseList);
     
   };
 
