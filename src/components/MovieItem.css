@@ -5,8 +5,8 @@
 }
 
 .movie-list {
-  display: flex !important;
-  flex-wrap: wrap !important;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .movie-item {
   margin: 1rem;
